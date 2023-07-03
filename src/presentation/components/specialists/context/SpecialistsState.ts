@@ -6,10 +6,21 @@ import { LocalityFailure } from "@/lib/domain/core/failures/locality/localityFai
 export interface ISpecialistsState {
   getSpecialists: ISpecialistsSpecialistsState;
   getSpecialist: ISpecialistsSpecialistsState;
+  getSpecialistLocalities: ISpecialistsSpecialistsState;
+  getSpecialistServices: ISpecialistsSpecialistsState;
+  getAttentionWindowsByService: ISpecialistsSpecialistsState;
+  createAppointment: ISpecialistsSpecialistsState;
+  createUser: ISpecialistsSpecialistsState;
+  changeStep: ISpecialistsSpecialistsState;
+  changeService: ISpecialistsSpecialistsState;
+  changeLocality: ISpecialistsSpecialistsState;
+  changeHourSelected: ISpecialistsSpecialistsState;
+  changeUserId: ISpecialistsSpecialistsState;
+  changeAppointmentData: ISpecialistsSpecialistsState;
 }
 
 interface ISpecialistsSpecialistsState {
-  data: Array<Specialist> | string | Specialist;
+  data: any;
   loading: boolean;
   successful: boolean;
   error: LocalityFailure | null; 
@@ -24,6 +35,72 @@ export const initialState: ISpecialistsState = {
   },
   getSpecialist: {
     data: {} as Specialist,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  getSpecialistLocalities: {
+    data: [],
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  getSpecialistServices: {
+    data: [],
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  getAttentionWindowsByService: {
+    data: [],
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  createAppointment: {
+    data: null,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  createUser: {
+    data: null,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  changeStep: {
+    data: 0,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  changeService: {
+    data: null,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  changeLocality: {
+    data: null,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  changeHourSelected: {
+    data: null,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  changeUserId: {
+    data: null,
+    loading: false,
+    successful: false,
+    error: null,
+  },
+  changeAppointmentData: {
+    data: null,
     loading: false,
     successful: false,
     error: null,

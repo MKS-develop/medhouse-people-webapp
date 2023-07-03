@@ -6,7 +6,7 @@ export interface ILocality {
     clues: string;
     address: string;
     postal_code: number;
-    state: IState;
+    state: IState | undefined;
     city: string;
     image_url: string;
     latitude: number;
